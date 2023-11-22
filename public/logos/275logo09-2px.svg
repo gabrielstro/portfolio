@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="25 25 50 50" width="46.5213" height="35.7475" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+		.s0 { fill: none;stroke: #fff;stroke-linecap: square;stroke-width: 18 } 
+	</style>
+  </defs>
+  <g id="g-2" style="" transform="matrix(0.8575360774993896, 0, 0, 0.8367869853973389, -58.993961334228516, -42.5247917175293)">
+    <title>275</title>
+    <path id="path-6" class="s0" d="M 99.979 111.056 L 140.093 110.903 L 140.028 118.423 L 99.979 118.383 L 99.979 125.51 L 139.924 125.408" style="paint-order: fill; stroke-width: 2.36082px;">
+      <title>2</title>
+    </path>
+    <path id="path-5" class="s0" d="M 99.979 103.997 L 147.34 103.997 L 147.328 125.51" style="paint-order: fill; stroke-width: 2.36082px;">
+      <title>7</title>
+    </path>
+    <path id="path-4" class="s0" d="M 154.229 89.781 L 99.99 89.781 L 99.979 97.083 L 154.218 97.243 L 154.229 132.501 L 99.979 132.113" style="paint-order: fill; stroke-width: 2.36082px;">
+      <title>5</title>
+    </path>
+  </g>
+</svg>
