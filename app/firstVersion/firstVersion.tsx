@@ -71,7 +71,7 @@ export default function FirstVersion() {
           <h1 className="text-3xl font-semibold mb-2">Gabriel Strobel</h1>
           <h2 className="text-3xl font-semibold mb-8" style={{ color: color}}>front-end developer</h2>
           <p className="text-gray-400 mb-6">Desenvolvedor front-end desde 2017, especializado em criar componentes de interface e páginas interativas utilizando tecnologias como React, Next e Tailwind.</p>
-          <button className="btn btn-primary border py-2 px-4" style={{ borderColor: color }}>Entre em contato</button>
+          <button className="btn btn-primary border py-2 px-4" style={{ borderColor: color }} onClick={() => window.open('https://www.linkedin.com/in/gabriel-strobel-a8376880/', '_blank')}>Entre em contato</button>
         </div>
         
         <div className='w-auto m-auto flex flex-col '>
