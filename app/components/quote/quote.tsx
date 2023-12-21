@@ -1,4 +1,3 @@
-'use client'
 import React, { MouseEventHandler } from "react";
 
 export default function Quote({text, author, onClick }: { text: string, author: string, onClick: MouseEventHandler} ) {

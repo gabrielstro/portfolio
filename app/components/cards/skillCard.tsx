@@ -1,7 +1,6 @@
 'use client'
 import React from "react";
 
-
 export default function SkillCard({ category, skillsList }: { category: string, skillsList: string[]} ) {
   return (
     <div className='min-h-[80px] w-[178px] border border-gray-500'>

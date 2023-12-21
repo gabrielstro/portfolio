@@ -2,8 +2,19 @@
 import React from "react";
 import Image from 'next/image'
 
+type ProjectCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  link?: string;
+}
 
-export default function ProjectCard({image, title, description, link }: { image: string, title: string, description: string, link: string} ) {
+export default function ProjectCard({image, title, description, link }: ProjectCardProps ) {
+
+  const onClickLinkButton = (link: string) => {
+    window.open(link, '_blank')
+  }
+
   return (
     <div className='project-card min-w-[330px] max-w-[330px] min-h-96 border border-gray-500'>
       <div className='project-card-image'>
@@ -14,9 +25,9 @@ export default function ProjectCard({image, title, description, link }: { image:
           <h3 className='text-white'>{title}</h3>
           <p className='text-gray-400 mt-2'>{description}</p>
         </div>
-        {/* <div className='project-links'>
-          <button className='btn btn-primary border py-2 px-4 mt-6'  onClick={() => console.log(link)}>see +</button>
-        </div> */}
+        {link && <div className='project-links'>
+          <button className='btn btn-primary border py-2 px-4 mt-6'  onClick={() => onClickLinkButton(link)}>see +</button>
+        </div>}
       </div>
     </div>
   )
