@@ -23,10 +23,6 @@ type Quote = {
 
 type hexColor = string;
 
-const getRandomColor = (): string => {
-  return colorList[Math.floor(Math.random() * colorList.length)];
-}
-
 const getRandomQuote = (): Quote => {
   return quoteList[Math.floor(Math.random() * quoteList.length)];
 }
@@ -34,8 +30,12 @@ const getRandomQuote = (): Quote => {
 export default function FirstVersion() {
   const [color, setColor] = useState<hexColor>(colorList[0]);
   const [quoteData, setQuoteData] = useState(quoteList[0]);
-
-
+  
+  const getRandomColor = (): string => {
+    const newColor = colorList[Math.floor(Math.random() * colorList.length)];
+    if (newColor === color) return getRandomColor()
+    return newColor
+  }
   
   function SectionTitle ({ title }: { title: string }) {
     return (
@@ -46,23 +46,27 @@ export default function FirstVersion() {
       </div>
     )
   }
+
+  function onClickCV () {
+    window.open('/CV_Gabriel_Strobel.pdf', '_blank')
+  }
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 p-5">
       <header className="header z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className='absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:hidden'>
+        {/* <div className='absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:hidden'>
+          <Logo275 color={color} />
+        </div> */}
+        {/* <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+        </div> */}
+        <div className='w-28 h-auto'>
           <Logo275 color={color} />
         </div>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <div className='w-28 h-auto'>
-            <Logo275 color={color} />
-          </div>
-        </div>
         <div className='menu-links flex'>
-          <Link className='menu-link pr-8' href='#'><span style={{ color: color}}>#</span>home</Link>
-          <Link className='menu-link pr-8' href='#projects'><span style={{ color: color}}>#</span>works</Link>
-          <Link className='menu-link pr-8' href='#contact'><span style={{ color: color}}>#</span>contacts</Link>
-          <Link className='menu-link pr-8' href='#about-me'><span style={{ color: color}}>#</span>about-me</Link>
+          <Link className='menu-link pr-8' href='#'><span style={{ color: color}}>#</span>início</Link>
+          <Link className='menu-link pr-8' href='#projects'><span style={{ color: color}}>#</span>projetos</Link>
+          <Link className='menu-link pr-8' href='#contact'><span style={{ color: color}}>#</span>contato</Link>
+          <Link className='menu-link pr-8' href='#about-me'><span style={{ color: color}}>#</span>sobre</Link>
         </div>
       </header>
 
@@ -71,7 +75,10 @@ export default function FirstVersion() {
           <h1 className="text-3xl font-semibold mb-2">Gabriel Strobel</h1>
           <h2 className="text-3xl font-semibold mb-8" style={{ color: color}}>front-end developer</h2>
           <p className="text-gray-400 mb-6">Desenvolvedor front-end desde 2017, especializado em criar componentes de interface e páginas interativas utilizando tecnologias como React, Next e Tailwind.</p>
-          <button className="btn btn-primary border py-2 px-4" style={{ borderColor: color }} onClick={() => window.open('https://www.linkedin.com/in/gabriel-strobel-a8376880/', '_blank')}>Entre em contato</button>
+          <div className='flex gap-4'>
+            <button className="btn btn-primary border py-2 px-4" style={{ borderColor: color }} onClick={() => window.open('https://www.linkedin.com/in/gabriel-strobel-a8376880/', '_blank')}>Entre em contato</button>
+            <button className="btn btn-primary border py-2 px-4" style={{ borderColor: color }} onClick={() => window.open('/CurrículoGabrielStrobel.pdf', '_blank')}>Currículo</button>
+          </div>
         </div>
         
         <div className='w-auto m-auto flex flex-col '>

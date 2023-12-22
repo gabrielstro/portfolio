@@ -21,14 +21,6 @@ const quoteList: Quote[] = [
     author: 'Albert Einstein'
   },
   {
-    text: 'O pensamento é o ensaio da ação.',
-    author: 'Sigmund Freud'
-  },
-  {
-    text: 'O sintoma é a inscrição do simbólico no real.',
-    author: 'Jacques Lacan'
-  },
-  {
     text: 'Um passo à frente e você não está mais no mesmo lugar.',
     author: 'Chico Science'
   },

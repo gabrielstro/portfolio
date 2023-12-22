@@ -29,16 +29,21 @@ export const projectsData = [
     image: '/powerhouse03.jpg',
     title: 'Plataforma de empreendedorismo',
     description: 'Plataforma de transmissão de evento e assinatura anual.'
+  },
+  {
+    image: '/componentes-solides.png',
+    title: 'Biblioteca de componentes',
+    description: 'Coleção de componentes de interface, seguindo design system desenvolvido previamente pelo time de design.'
   }
-];
+]
 
 export const skillsData = [
   {
-    type: 'Language', 
+    type: 'Linguagens', 
     skills: ['HTML', 'CSS', 'Javascript', 'Typescript']
   },
   {
-    type: 'LibsFrameworks', 
+    type: 'Libs/Frameworks', 
     skills: ['React', 'Next', 'Vanilla', 'JQuery']
   },
   {
@@ -46,7 +51,7 @@ export const skillsData = [
     skills: ['Google Analytics', 'Google Tag Manager', 'HotJar']
   },
   {
-    type: 'Tests', 
+    type: 'Testes', 
     skills: ['Jest', 'React Testing Library', 'TDD']
   },
   {
@@ -54,7 +59,7 @@ export const skillsData = [
     skills: ['Google Ads', 'Facebook Ads']
   },
   {
-    type: 'Monitoring', 
+    type: 'Observabilidade', 
     skills: ['Sentry', 'New Relic']
   }
 ]
